@@ -4,7 +4,7 @@
 
 ![](https://avatars1.githubusercontent.com/u/4318332?v=3&s=460)
 
-![](https://img.shields.io/github/stars/jaly19870729/UITextField-ValidTextFieldValue-.svg) ![](https://img.shields.io/github/forks/jaly19870729/UITextField-ValidTextFieldValue-.svg) ![](https://img.shields.io/github/tag/jaly19870729/UITextField-ValidTextFieldValue-.svg) ![](https://img.shields.io/github/release/jaly19870729/UITextField-ValidTextFieldValue-.svg) ![](https://img.shields.io/github/issues/jaly19870729/UITextField-ValidTextFieldValue-.svg)
+![](https://img.shields.io/github/stars/jaly19870729/JAScrollChartView.svg) ![](https://img.shields.io/github/forks/jaly19870729/JAScrollChartView.svg) ![](https://img.shields.io/github/tag/jaly19870729/JAScrollChartView.svg) ![](https://img.shields.io/github/release/jaly19870729/JAScrollChartView.svg) ![](https://img.shields.io/github/issues/jaly19870729/JAScrollChartView.svg)
 ### 主要特性
 
 - 使用如下
