@@ -10,9 +10,9 @@
 ![](https://raw.githubusercontent.com/jaly19870729/JAScrollChartView/master/Screenshot/screenshot.gif)
 
 - 使用如下
-### Cocoapods
 
-[CocoaPods](http://cocoapods.org) is the recommended way to add PNChart to your project.
+
+[CocoaPods](http://cocoapods.org) is the recommended way to add JAScrollChartView to your project.
 
 1. Add a pod entry for JAScrollChartView to your Podfile `pod "JAScrollChartView" , :git => 'https://github.com/jaly19870729/JAScrollChartView.git'`
 2. Install the pod(s) by running `pod install`.
