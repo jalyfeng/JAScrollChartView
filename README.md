@@ -6,6 +6,7 @@
 
 ![](https://img.shields.io/github/stars/jaly19870729/JAScrollChartView.svg) ![](https://img.shields.io/github/forks/jaly19870729/JAScrollChartView.svg) ![](https://img.shields.io/github/tag/jaly19870729/JAScrollChartView.svg) ![](https://img.shields.io/github/release/jaly19870729/JAScrollChartView.svg) ![](https://img.shields.io/github/issues/jaly19870729/JAScrollChartView.svg)
 ### 主要特性
+####截图
 
 ![](https://raw.githubusercontent.com/jaly19870729/JAScrollChartView/master/Screenshot/screenshot.gif)
 
@@ -36,3 +37,4 @@ unitData.lableTitle = [NSString stringWithFormat:@"day %d", (int)i];
 [self.chartView addChartData:data];
 
 ```
+
