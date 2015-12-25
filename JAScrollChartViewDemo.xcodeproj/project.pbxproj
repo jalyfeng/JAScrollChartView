@@ -14,7 +14,7 @@
 		EE14131E1C2BF062001BCDE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE14131C1C2BF062001BCDE2 /* Main.storyboard */; };
 		EE1413201C2BF062001BCDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE14131F1C2BF062001BCDE2 /* Assets.xcassets */; };
 		EE1413231C2BF062001BCDE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1413211C2BF062001BCDE2 /* LaunchScreen.storyboard */; };
-		EED89F631C2CD97B000B785A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EED89F621C2CD97B000B785A /* README.md */; };
+		EED89F651C2CDA69000B785A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EED89F641C2CDA69000B785A /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		EE14131F1C2BF062001BCDE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE1413221C2BF062001BCDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE1413241C2BF062001BCDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EED89F621C2CD97B000B785A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EED89F641C2CDA69000B785A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 				EE14131F1C2BF062001BCDE2 /* Assets.xcassets */,
 				EE1413211C2BF062001BCDE2 /* LaunchScreen.storyboard */,
 				EE1413241C2BF062001BCDE2 /* Info.plist */,
-				EED89F621C2CD97B000B785A /* README.md */,
+				EED89F641C2CDA69000B785A /* README.md */,
 				EE1413131C2BF062001BCDE2 /* Supporting Files */,
 			);
 			path = JAScrollChartViewDemo;
@@ -229,7 +229,7 @@
 			files = (
 				EE14131B1C2BF062001BCDE2 /* ViewController.m in Sources */,
 				EE1413181C2BF062001BCDE2 /* AppDelegate.m in Sources */,
-				EED89F631C2CD97B000B785A /* README.md in Sources */,
+				EED89F651C2CDA69000B785A /* README.md in Sources */,
 				EE1413151C2BF062001BCDE2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
