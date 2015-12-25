@@ -15,6 +15,7 @@
 		EE1413231C2BF062001BCDE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1413211C2BF062001BCDE2 /* LaunchScreen.storyboard */; };
 		EE14132F1C2BF0B4001BCDE2 /* JAChartData.m in Sources */ = {isa = PBXBuildFile; fileRef = EE14132C1C2BF0B4001BCDE2 /* JAChartData.m */; };
 		EE1413301C2BF0B4001BCDE2 /* JAScrollChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE14132E1C2BF0B4001BCDE2 /* JAScrollChartView.m */; };
+		EED89F581C2CD185000B785A /* JAScrollChartView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EED89F571C2CD185000B785A /* JAScrollChartView.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EE14132C1C2BF0B4001BCDE2 /* JAChartData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAChartData.m; sourceTree = "<group>"; };
 		EE14132D1C2BF0B4001BCDE2 /* JAScrollChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAScrollChartView.h; sourceTree = "<group>"; };
 		EE14132E1C2BF0B4001BCDE2 /* JAScrollChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAScrollChartView.m; sourceTree = "<group>"; };
+		EED89F571C2CD185000B785A /* JAScrollChartView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = JAScrollChartView.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				EE1413191C2BF062001BCDE2 /* ViewController.h */,
 				EE14131A1C2BF062001BCDE2 /* ViewController.m */,
 				EE14131C1C2BF062001BCDE2 /* Main.storyboard */,
+				EED89F571C2CD185000B785A /* JAScrollChartView.podspec */,
 				EE14131F1C2BF062001BCDE2 /* Assets.xcassets */,
 				EE1413211C2BF062001BCDE2 /* LaunchScreen.storyboard */,
 				EE1413241C2BF062001BCDE2 /* Info.plist */,
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EED89F581C2CD185000B785A /* JAScrollChartView.podspec in Resources */,
 				EE1413231C2BF062001BCDE2 /* LaunchScreen.storyboard in Resources */,
 				EE1413201C2BF062001BCDE2 /* Assets.xcassets in Resources */,
 				EE14131E1C2BF062001BCDE2 /* Main.storyboard in Resources */,
@@ -320,6 +324,7 @@
 				EE1413291C2BF062001BCDE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

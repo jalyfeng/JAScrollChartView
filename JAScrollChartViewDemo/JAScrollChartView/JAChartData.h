@@ -11,6 +11,6 @@
 @interface JAChartData : NSObject
 
 @property (strong, nonatomic) NSString* lableTitle;
-@property (assign, nonatomic) CGFloat value;
 
+@property(assign,nonatomic) double value;
 @end
