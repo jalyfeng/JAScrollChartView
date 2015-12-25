@@ -20,6 +20,44 @@
 3. Include JAScrollChartView wherever you need it with `#import "JAScrollChartView.h"`.
 
 ```objc
+/**
+*  x轴边距,默认40
+*/
+@property(assign,nonatomic) CGFloat xAxisMargin;
+/**
+*  y轴边距,默认40
+*/
+@property(assign,nonatomic) CGFloat yAxisMargin;
+/**
+*  Y轴分割数,默认6
+*/
+@property(assign,nonatomic) NSInteger yAxisCount;
+/**
+*  y轴最大值,默认200
+*/
+@property(assign,nonatomic) CGFloat yAxisMaxValue;
+
+/**
+*  xy轴线的颜色,默认redColor
+*/
+@property(strong,nonatomic) UIColor *xyAxisLineColor;
+/**
+*  线的颜色,默认redColor
+*/
+@property(strong,nonatomic) UIColor *dataLineColor;
+/**
+*  拐点颜色,默认greenColor
+*/
+@property(strong,nonatomic) UIColor *dataPointColor;
+/**
+*  拐点选中颜色,默认yellowColor
+*/
+@property(strong,nonatomic) UIColor *dataSelectedColor;
+
+```
+
+
+```objc
 
 self.chartView = [[JAScrollChartView alloc] initWithFrame:CGRectMake(0, 280, 320, 200)];
 self.chartView.delegate = self;

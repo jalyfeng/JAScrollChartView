@@ -24,32 +24,32 @@
  */
 @property(assign,nonatomic) CGFloat xAxisMargin;
 /**
- *  y轴边距
+ *  y轴边距,默认40
  */
 @property(assign,nonatomic) CGFloat yAxisMargin;
 /**
- *  Y轴分割数
+ *  Y轴分割数,默认6
  */
 @property(assign,nonatomic) NSInteger yAxisCount;
 /**
- *  y轴最大值
+ *  y轴最大值,默认200
  */
 @property(assign,nonatomic) CGFloat yAxisMaxValue;
 
 /**
- *  xy轴线的颜色
+ *  xy轴线的颜色,默认redColor
  */
 @property(strong,nonatomic) UIColor *xyAxisLineColor;
 /**
- *  线的颜色
+ *  线的颜色,默认redColor
  */
 @property(strong,nonatomic) UIColor *dataLineColor;
 /**
- *  拐点颜色
+ *  拐点颜色,默认greenColor
  */
 @property(strong,nonatomic) UIColor *dataPointColor;
 /**
- *  拐点选中颜色
+ *  拐点选中颜色,默认yellowColor
  */
 @property(strong,nonatomic) UIColor *dataSelectedColor;
 

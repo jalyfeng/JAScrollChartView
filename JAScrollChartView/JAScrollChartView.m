@@ -36,6 +36,19 @@ static NSString * const chartCollectionIdentifier=@"chartCollectionIdentifier";
 
 @property(strong,nonatomic) NSMutableArray *pathPoints;
 
+/**
+ *  线的颜色
+ */
+@property(strong,nonatomic) UIColor *dataLineColor;
+/**
+ *  拐点颜色
+ */
+@property(strong,nonatomic) UIColor *dataPointColor;
+/**
+ *  拐点选中颜色
+ */
+@property(strong,nonatomic) UIColor *dataSelectedColor;
+
 
 -(void)setChartData:(NSArray *)data yAxisDetal:(CGFloat )yAxisDetal yAxisRate:(CGFloat)yAxisRate;
 -(void)setSelectedPonint:(CGPoint)point;
@@ -44,22 +57,10 @@ static NSString * const chartCollectionIdentifier=@"chartCollectionIdentifier";
 
 
 @interface JAScrollChartView()<UICollectionViewDataSource,ChartCollectionViewCellPointDelegate>
-/**
- *  x轴边距
- */
-@property(assign,nonatomic) CGFloat xAxisMargin;
-/**
- *  y轴边距
- */
-@property(assign,nonatomic) CGFloat yAxisMargin;
+
 
 @property(assign,nonatomic) CGFloat xAxisLineLength;
 @property(assign,nonatomic) CGFloat yAxisLineLength;
-
-@property(assign,nonatomic) NSInteger yAxisCount;
-@property(assign,nonatomic) CGFloat yAxisMaxValue;
-
-
 
 @property(strong,nonatomic) UICollectionView *chartCollectionView;
 @property(strong,nonatomic) UICollectionViewFlowLayout *chartCollectionViewLayout;
@@ -96,6 +97,25 @@ static NSString * const chartCollectionIdentifier=@"chartCollectionIdentifier";
 
 -(void)setViews{
     
+    
+    self.chartCollectionViewLayout=[[UICollectionViewFlowLayout alloc]init];
+    self.chartCollectionView.backgroundColor=self.backgroundColor;
+    self.chartCollectionViewLayout.scrollDirection=UICollectionViewScrollDirectionHorizontal;
+    self.chartCollectionView=[[UICollectionView alloc]initWithFrame:[self getCollectionViewRect] collectionViewLayout:self.chartCollectionViewLayout];
+    self.chartCollectionViewLayout.itemSize=[self getCollectionViewItemSize];
+    self.chartCollectionViewLayout.minimumLineSpacing=0.0f;
+    //self.chartCollectionViewLayout.minimumLineSpacing=0.1;
+    [self.chartCollectionView registerClass:[ChartCollectionViewCell class] forCellWithReuseIdentifier:chartCollectionIdentifier];
+    
+    //代理
+    self.chartCollectionView.dataSource=self;
+    
+    [self insertSubview:self.chartCollectionView atIndex:0];
+    
+
+}
+
+-(void)setupDefaultData{
     if(!self.yAxisCount){
         self.yAxisCount=6;
     }
@@ -117,21 +137,19 @@ static NSString * const chartCollectionIdentifier=@"chartCollectionIdentifier";
     if(!self.chartDataArray){
         self.chartDataArray=[NSMutableArray new];
     }
-    self.chartCollectionViewLayout=[[UICollectionViewFlowLayout alloc]init];
-    self.chartCollectionView.backgroundColor=self.backgroundColor;
-    self.chartCollectionViewLayout.scrollDirection=UICollectionViewScrollDirectionHorizontal;
-    self.chartCollectionView=[[UICollectionView alloc]initWithFrame:[self getCollectionViewRect] collectionViewLayout:self.chartCollectionViewLayout];
-    self.chartCollectionViewLayout.itemSize=[self getCollectionViewItemSize];
-    self.chartCollectionViewLayout.minimumLineSpacing=0.0f;
-    //self.chartCollectionViewLayout.minimumLineSpacing=0.1;
-    [self.chartCollectionView registerClass:[ChartCollectionViewCell class] forCellWithReuseIdentifier:chartCollectionIdentifier];
-    
-    //代理
-    self.chartCollectionView.dataSource=self;
-    
-    [self insertSubview:self.chartCollectionView atIndex:0];
-    
-
+    if(!self.xyAxisLineColor){
+        self.xyAxisLineColor=[UIColor redColor];
+    }
+    if(!self.dataLineColor){
+        self.dataLineColor=[UIColor redColor];
+    }
+    if(!self.dataPointColor){
+        self.dataPointColor=[UIColor greenColor];
+    }
+    if(!self.dataSelectedColor){
+        self.dataSelectedColor=[UIColor yellowColor];
+    }
+    self.chartCollectionView.backgroundColor=[UIColor clearColor];
 }
 
 -(void)addChartData:(NSArray<JAChartData *> *)data{
@@ -216,6 +234,8 @@ static NSString * const chartCollectionIdentifier=@"chartCollectionIdentifier";
 
 
 -(void)drawRect:(CGRect)rect{
+    [self setupDefaultData];
+    
     //画y轴
     UIBezierPath *xyPath=[UIBezierPath bezierPath];
     [xyPath moveToPoint:CGPointMake(self.yAxisMargin, 0)];
@@ -228,7 +248,7 @@ static NSString * const chartCollectionIdentifier=@"chartCollectionIdentifier";
     
     xyLayer.path=xyPath.CGPath;
     xyLayer.fillColor=[UIColor clearColor].CGColor;
-    xyLayer.strokeColor=[UIColor redColor].CGColor;
+    xyLayer.strokeColor=self.xyAxisLineColor.CGColor;
     xyPath.lineWidth=2;
     
     [self setupYAxisLabel];
@@ -291,6 +311,7 @@ static NSString * const chartCollectionIdentifier=@"chartCollectionIdentifier";
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     ChartCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:chartCollectionIdentifier forIndexPath:indexPath];
+    [self setupCellColor:cell];
     cell.pointDelegate=self;
     cell.backgroundColor=[UIColor clearColor];
     [cell setChartData:self.chartDataArray[indexPath.row] yAxisDetal:[self getYOffset]+self.xAxisMargin yAxisRate:[self getYOffset]/[self getYUnit]];
@@ -298,6 +319,12 @@ static NSString * const chartCollectionIdentifier=@"chartCollectionIdentifier";
         [cell setSelectedPonint:self.selectedPoint];
     }
     return cell;
+}
+
+-(void)setupCellColor:(ChartCollectionViewCell *)cell{
+    cell.dataLineColor=self.dataLineColor;
+    cell.dataPointColor=self.dataPointColor;
+    cell.dataSelectedColor=self.dataSelectedColor;
 }
 
 #pragma mark -
