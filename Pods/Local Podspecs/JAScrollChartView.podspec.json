@@ -1,0 +1,33 @@
+{
+  "name": "JAScrollChartView",
+  "version": "0.0.1",
+  "summary": "A simple and beautiful chart lib with animation used in Piner for iOS",
+  "description": "#JAScrollChartView\n\nJAScrollChartView\n\n## Requirements\nJAScrollChartView works on iOS 7.0 and later version and is compatible with ARC projects. It depends on the following Apple frameworks, which should already be included with most Xcode templates:\n* Foundation.framework\n* UIKit.framework\n* CoreGraphics.framework\n* QuartzCore.framework\nYou will need LLVM 3.0 or later in order to build JAScrollChartView.",
+  "homepage": "https://github.com/jaly19870729/JAScrollChartView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jaly19870729": "jalyfeng@gmail.com"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/jaly19870729/JAScrollChartView.git",
+    "tag": "0.0.1"
+  },
+  "source_files": [
+    "JAScrollChartView",
+    "JAScrollChartView/**/*.{h,m}"
+  ],
+  "public_header_files": "JAScrollChartView/**/*.h",
+  "frameworks": [
+    "CoreGraphics",
+    "UIKit",
+    "Foundation",
+    "QuartzCore"
+  ],
+  "requires_arc": true
+}

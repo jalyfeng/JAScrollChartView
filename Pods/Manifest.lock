@@ -1,0 +1,19 @@
+PODS:
+  - JAScrollChartView (0.0.1)
+
+DEPENDENCIES:
+  - JAScrollChartView (from `https://github.com/jaly19870729/JAScrollChartView.git`)
+
+EXTERNAL SOURCES:
+  JAScrollChartView:
+    :git: https://github.com/jaly19870729/JAScrollChartView.git
+
+CHECKOUT OPTIONS:
+  JAScrollChartView:
+    :commit: 691cdde33cd9497cc93fd8ca85c8880d83fe2c86
+    :git: https://github.com/jaly19870729/JAScrollChartView.git
+
+SPEC CHECKSUMS:
+  JAScrollChartView: 1f1d42f8d94b178fae1d802d87eb83df3e778e7d
+
+COCOAPODS: 0.39.0
